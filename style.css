@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background-image: url(./img/bg.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+  color: #fff;
+  margin: 3.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+header .profile {
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(90deg, #c91842 0%, #ffde59 100%),
+    linear-gradient(0deg, #262629, #262629);
+  padding-top: 4px;
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform 0.3s;
+}
+
+header .profile:hover {
+  transform: scale(1.1);
+}
+
+header .profile img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+header ul li a {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+header ul li a:hover {
+  color: #a8a8b3;
+}
+
+main {
+  max-width: 52rem;
+  margin: 3.2rem auto;
+  display: grid;
+  gap: 2.4rem;
+}
+
+main section {
+  background: linear-gradient(90deg, #c91842 0%, #ffde59 100%),
+    linear-gradient(0deg, #262629, #262629);
+  padding-top: 4px;
+  border-radius: 10px;
+  animation: toRight 0.7s 0.5 backwards;
+}
+
+main section:nth-child(1) {
+  animation-delay: 0;
+}
+main section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+main section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+main section div {
+  background-color: #202024;
+  border-radius: 8px;
+  padding: 2.4rem 3.2rem 3.2rem;
+}
+
+main section div h1 {
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+}
+
+main section div p {
+  line-height: 2.5rem;
+  letter-spacing: -0.18px;
+  margin-bottom: 2.4rem;
+  color: #a8a8b3;
+}
+
+main section div ul {
+  display: flex;
+  gap: 1.6rem;
+}
+
+main section div ul li {
+  transition: transform 0.3s;
+}
+
+main section div ul li:hover {
+  transform: scale(1.1);
+}
+
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
